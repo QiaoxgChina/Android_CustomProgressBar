@@ -1,0 +1,41 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- id : 不能修改，因为android系统内部是通过id寻找图层 -->
+    <!-- 总的进度 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#FFB5D8" />
+            <corners
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="15dp"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+
+    <!-- 缓冲的进度 -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="#00FF00" />
+                <corners android:radius="15dp" />
+            </shape>
+        </clip>
+    </item>
+
+    <!-- 当前的进度 -->
+    <item android:id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/shape_round_corner_22_progress_start"
+            android:scaleWidth="100%"></scale>
+        <!--<clip>-->
+        <!--<shape>-->
+        <!--<gradient-->
+        <!--android:angle="0"-->
+        <!--android:endColor="#E8313E"-->
+        <!--android:startColor="#E936F5" />-->
+        <!--<corners android:radius="15dp" />-->
+
+        <!--</shape>-->
+        <!--</clip>-->
+    </item>
+</layer-list>
